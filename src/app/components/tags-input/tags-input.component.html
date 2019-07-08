@@ -1,8 +1,0 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <input type="text" formControlName="tags" placeholder="Input tag">
-  <button type="submit" [disabled]="!profileForm.valid">
-    Submit
-  </button>
-  <div>Tags List: {{ tags.length }}</div>
-  <div *ngFor="let tag of tags">- {{ tag }}</div>
-</form>

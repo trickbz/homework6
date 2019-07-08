@@ -1,0 +1,26 @@
+<h3>Form with custom tags input</h3>
+Type a tag, then press [Space] to add.<br />
+Please see the list of allowed values below.
+
+<div class="tags-input-form">
+  <form [formGroup]="tagsInputFormGroup">
+    <app-custom-input formControlName="tags" (keydown)="onKeyDown($event)"></app-custom-input>
+    <div *ngIf="!tagsInputFormGroup.get('tags').valid" class="validation-message">
+      Values should be from the predefined list.
+    </div>
+  </form>
+</div>
+
+<h3>Selected tags</h3>
+<div>
+  <ul>
+    <li *ngFor="let tag of tagsList">{{ tag }}</li>
+  </ul>
+</div>
+
+<div>
+  <h3>Allowed values</h3>
+  <ul>
+    <li *ngFor="let tag of allowedTagsArray">{{ tag }}</li>
+  </ul>
+</div>

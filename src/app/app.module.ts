@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TagsInputComponent } from './components/tags-input/tags-input.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { CustomInputContainerComponent } from './components/custom-input-container/custom-input-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TagsInputComponent
+    CustomInputComponent,
+    CustomInputContainerComponent
   ],
   imports: [
     BrowserModule,
